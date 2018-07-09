@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="css/app.css"/>
+		<style>
+			.title {
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+			}
+            .userAvatar .mui-table-view:before,
+            .userAvatar .mui-table-view:after,
+            .userAvatar .mui-table-view-cell:before,
+            .userAvatar .mui-table-view-cell:after {
+                background-color: transparent;
+            }
+            
+            .mem-nav-h {
+                display: flex;
+                text-align: center;
+                background-color: #2E374D;
+                padding: 10px 0;
+            }
+            
+            .mem-nav-h div {
+                flex: 1;
+            }
+
+		</style>
+		<!--<script>
+			function fun(){
+				var wv = plus.webview.create(‘http://www.baidu.com’,'baidu');
+				wv.evalJS("plus.key.addEventListener('backbutton',function () { plus.webview.currentWebview().close(); })");
+			}
+		</script>-->
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">风景</h1>
+		</header>
+		<div class="mui-content">
+			 <div id="slider" class="mui-slider ">
+                        <div class="mui-slider-group mui-slider-loop">
+                            <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                            <div class="mui-slider-item mui-slider-item-duplicate">
+                                <a href="#">
+                                    <img src="images/t2.jpg">
+                                    <p class="mui-slider-title">静静看这世界</p>
+                                </a>
+                            </div>
+                            <div class="mui-slider-item">
+                                <a href="happy.html">
+                                    <img src="images/t1.jpg">
+                                    <p class="mui-slider-title">世界杯！！！</p>
+                                </a>
+                            </div>
+                            <div class="mui-slider-item">
+                                <a href="in.html">
+                                    <img src="images/t3.jpg">
+                                    <p class="mui-slider-title">雪中的少女</p>
+                                </a>
+                            </div>
+                            <div class="mui-slider-item">
+                                <a href="#">
+                                    <img src="images/t5.jpg">
+                                    <p class="mui-slider-title">深沉的城市</p>
+                                </a>
+                            </div>
+                            <div class="mui-slider-item">
+                                <a href="#">
+                                    <img src="images/t2.jpg">
+                                    <p class="mui-slider-title">静静看这世界</p>
+                                </a>
+                            </div>
+                            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                            <div class="mui-slider-item mui-slider-item-duplicate">
+                                <a href="#">
+                                    <img src="images/t1.jpg">
+                                    <p class="mui-slider-title">黄昏的奇幻</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mui-slider-indicator mui-text-right">
+                            <div class="mui-indicator mui-active"></div>
+                            <div class="mui-indicator"></div>
+                            <div class="mui-indicator"></div>
+                            <div class="mui-indicator"></div>
+                        </div>
+                    </div>
+                    <ul class="mui-table-view">
+                        <li class="mui-table-view-cell mui-media">
+                            <a href="happy.html">
+                                <img class="mui-media-object mui-pull-left" src="images/muwu.jpg">
+                                <div class="mui-media-body">
+                                   世界杯
+                                    <p class="mui-ellipsis">世界杯比赛进入决赛！！！！</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mui-table-view-cell mui-media">
+                            <a href="javascript:;">
+                                <img class="mui-media-object mui-pull-left" src="images/t1.jpeg">
+                                <div class="mui-media-body">
+                                    夜景
+                                    <p class="mui-ellipsis">深夜的城，被极光所包围.</p>
+                                </div>
+                            </a>
+                        </li>
+                            <li class="mui-table-view-cell mui-media">
+                            <a href="javascript:;">
+                                <img class="mui-media-object mui-pull-left" src="images/t3.jpg">
+                                <div class="mui-media-body">
+                                    雪夜
+                                    <p class="mui-ellipsis">纯白的雪，在清晨，如同打翻的丝绸一般.</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mui-table-view-cell mui-media">
+                            <a href="javascript:;">
+                                <img class="mui-media-object mui-pull-left" src="images/t5.jpg">
+                                <div class="mui-media-body">
+                                    城
+                                    <p class="mui-ellipsis">寂静的城，到黄昏，如同打翻的调色盘一般.</p>
+                                </div>
+                            </a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+                            <a href="happy.html">
+                                <img class="mui-media-object mui-pull-left" src="images/muwu.jpg">
+                                <div class="mui-media-body">
+                                   世界杯
+                                    <p class="mui-ellipsis">世界杯比赛进入决赛！！！！</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mui-table-view-cell mui-media">
+                            <a href="javascript:;">
+                                <img class="mui-media-object mui-pull-left" src="images/t1.jpeg">
+                                <div class="mui-media-body">
+                                    夜景
+                                    <p class="mui-ellipsis">深夜的城，被极光所包围.</p>
+                                </div>
+                            </a>
+                        </li>
+                            <li class="mui-table-view-cell mui-media">
+                            <a href="javascript:;">
+                                <img class="mui-media-object mui-pull-left" src="images/t3.jpg">
+                                <div class="mui-media-body">
+                                    雪夜
+                                    <p class="mui-ellipsis">纯白的雪，在清晨，如同打翻的丝绸一般.</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mui-table-view-cell mui-media">
+                            <a href="javascript:;">
+                                <img class="mui-media-object mui-pull-left" src="images/t5.jpg">
+                                <div class="mui-media-body">
+                                    城
+                                    <p class="mui-ellipsis">寂静的城，到黄昏，如同打翻的调色盘一般.</p>
+                                </div>
+                            </a>
+						</li>
+                    </ul>
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script>
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+        var slider = mui("#slider");
+        slider.slider({
+            interval: 1000
+        });
+	</script>
+</html>

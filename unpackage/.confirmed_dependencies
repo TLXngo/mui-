@@ -1,0 +1,64 @@
+{
+  "index.html": {
+    "resources": [
+      "tab-webview-subpage-contact.html",
+      "tab-webview-subpage-about.html"
+    ],
+    "refer": [
+      "tab-webview-subpage-contact.html",
+      "tab-webview-subpage-about.html",
+      "tab-webview-subpage-setting.html",
+      "tab-webview-subpage-chat.html"
+    ]
+  },
+  "tab-webview-subpage-about.html": {
+    "refer": [
+      "More1_1.html",
+      "More1_3_1.html",
+      "More1_2.html",
+      "More1_3_2.html",
+      "More1_3_3.html"
+    ]
+  },
+  "More1_1.html": {
+    "refer": [
+      "tab-webview-subpage-about.html"
+    ]
+  },
+  "More1_3_1.html": {
+    "refer": [
+      "tab-webview-subpage-about.html"
+    ]
+  },
+  "More1_2.html": {
+    "refer": [
+      "tab-webview-subpage-about.html"
+    ]
+  },
+  "More1_3_3.html": {
+    "refer": [
+      "tab-webview-subpage-about.html"
+    ]
+  },
+  "More1_3_2.html": {
+    "refer": [
+      "tab-webview-subpage-about.html"
+    ]
+  },
+  "tab-webview-subpage-contact.html": {
+    "refer": [
+      "main.html",
+      "forget_password.html",
+      "reg.html",
+      "tab-webview-subpage-about.html",
+      "index.html",
+      "tab-webview-subpage-setting.html",
+      "mysetting.html"
+    ]
+  },
+  "main.html": {
+    "refer": [
+      "tab-webview-subpage-setting.html"
+    ]
+  }
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+		<!--主界面部分-->
+
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">世界杯</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-card">
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						乌拉圭胜在战术简单实用 戈洛温未能登场影响大
+					</div>
+				</div>
+			</div>
+			<div class="mui-card">
+				<div class="mui-card-header">世界杯决赛</div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						本届赛事只剩下8场对决，1/4决赛将在北京时间7月6日22:00打响。乌拉圭将对阵法国，7月7日凌晨2:00巴西将对阵比利时。7月7日22：00 瑞典将对阵英格兰，7月8日凌晨2:00 俄罗斯将对阵克罗地亚。					</div>
+				</div>
+				<div class="mui-card-footer">2018年7月4日</div>
+			</div>
+			
+			<div class="mui-card">
+				<div class="mui-card-header mui-card-media" style="height:40vw;background-image:url(./images/world_cup.jpeg)"></div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<p>Posted on July 05, 2018</p>
+						<p style="color: #333;">2018俄罗斯世界杯A组最后一轮，乌拉圭3-0完胜东道主俄罗斯队。此役过后，乌拉圭队夺得小组第一，俄罗斯排名第二。3比0的比分，展现出南美豪强乌拉圭队的强劲实力。</p>
+					</div>
+				</div>
+				<div class="mui-card-footer">
+					<a class="mui-card-link">Like</a>
+					<a class="mui-card-link">Read more</a>
+				</div>
+			</div>
+			
+			
+			<!--<div class="mui-card">
+				<div class="mui-card-header mui-card-media">
+					<div class="mui-card-media-object mui-pull-left">
+						<img src="../images/logo.png" width="34px" height="34px" />
+					</div>
+					<div class="mui-card-media-body">
+						小M
+						<p class="mui-ellipsis">发表于 6小时前</p>
+					</div>
+				</div>
+				<div class="mui-card-content mui-card-media" style="height:40vw;background-image:url(../images/yuantiao.jpg)"></div>
+				<div class="mui-card-footer">
+					<a class="mui-card-link">Like</a>
+					<a class="mui-card-link">Comment</a>
+					<a class="mui-card-link">Read more</a>
+				</div>
+			</div>-->
+			
+			<div class="mui-card">
+				<div class="mui-card-header mui-card-media">
+					<img src="./images/pic.jpg" />
+					<div class="mui-media-body">
+						汤琳轩
+						<p>发表于 2018-07-5 15:30</p>
+					</div>
+					<!--<img class="mui-pull-left" src="../images/logo.png" width="34px" height="34px" />
+					<h2>小M</h2>
+					<p>发表于 2016-06-30 15:30</p>-->
+				</div>
+				<div class="mui-card-content" >
+					<img src="./images/bg.jpg" alt="" width="100%"/>
+				</div>
+				<div class="mui-card-footer">
+					<a class="mui-card-link">Like</a>
+					<a class="mui-card-link">Comment</a>
+					<a class="mui-card-link">Read more</a>
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script>
+			mui.init();
+			 //侧滑容器父节点
+			var offCanvasWrapper = mui('#offCanvasWrapper');
+			 //主界面容器
+			var offCanvasInner = offCanvasWrapper[0].querySelector('.mui-inner-wrap');
+			 //菜单容器
+			var offCanvasSide = document.getElementById("offCanvasSide");
+			if (!mui.os.android) {
+				document.getElementById("move-togger").classList.remove('mui-hidden');
+				var spans = document.querySelectorAll('.android-only');
+				for (var i = 0, len = spans.length; i < len; i++) {
+					spans[i].style.display = "none";
+				}
+			}
+			 //移动效果是否为整体移动
+			var moveTogether = false;
+			 //侧滑容器的class列表，增加.mui-slide-in即可实现菜单移动、主界面不动的效果；
+			var classList = offCanvasWrapper[0].classList;
+			 //变换侧滑动画移动效果；
+			mui('.mui-input-group').on('change', 'input', function() {
+				if (this.checked) {
+					offCanvasSide.classList.remove('mui-transitioning');
+					offCanvasSide.setAttribute('style', '');
+					classList.remove('mui-slide-in');
+					classList.remove('mui-scalable');
+					switch (this.value) {
+						case 'main-move':
+							if (moveTogether) {
+								//仅主内容滑动时，侧滑菜单在off-canvas-wrap内，和主界面并列
+								offCanvasWrapper[0].insertBefore(offCanvasSide, offCanvasWrapper[0].firstElementChild);
+							}
+							break;
+						case 'main-move-scalable':
+							if (moveTogether) {
+								//仅主内容滑动时，侧滑菜单在off-canvas-wrap内，和主界面并列
+								offCanvasWrapper[0].insertBefore(offCanvasSide, offCanvasWrapper[0].firstElementChild);
+							}
+							classList.add('mui-scalable');
+							break;
+						case 'menu-move':
+							classList.add('mui-slide-in');
+							break;
+						case 'all-move':
+							moveTogether = true;
+							//整体滑动时，侧滑菜单在inner-wrap内
+							offCanvasInner.insertBefore(offCanvasSide, offCanvasInner.firstElementChild);
+							break;
+					}
+					offCanvasWrapper.offCanvas().refresh();
+				}
+			});
+			 //主界面‘显示侧滑菜单’按钮的点击事件
+			document.getElementById('offCanvasShow').addEventListener('tap', function() {
+				offCanvasWrapper.offCanvas('show');
+			});
+			 //菜单界面，‘关闭侧滑菜单’按钮的点击事件
+			document.getElementById('offCanvasHide').addEventListener('tap', function() {
+				offCanvasWrapper.offCanvas('close');
+			});
+			 //主界面和侧滑菜单界面均支持区域滚动；
+			mui('#offCanvasSideScroll').scroll();
+			mui('#offCanvasContentScroll').scroll();
+			 //实现ios平台原生侧滑关闭页面；
+			if (mui.os.plus && mui.os.ios) {
+				mui.plusReady(function() { //5+ iOS暂时无法屏蔽popGesture时传递touch事件，故该demo直接屏蔽popGesture功能
+					plus.webview.currentWebview().setStyle({
+						'popGesture': 'none'
+					});
+				});
+			}
+		</script>
+</body>
+</html>
